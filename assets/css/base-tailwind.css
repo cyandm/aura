@@ -1,0 +1,397 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --swiper-theme-color: #000 !important;
+}
+
+/*Peyda Fonts*/
+@layer base {
+  @font-face {
+    font-family: "Peyda-1";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("../fonts/peyda/woff2/PeydaWebFaNum-Thin.woff2") format("woff2"),
+      url("../fonts/peyda/TTF/PeydaFaNum-Thin.ttf") format("TrueType"),
+      url("../fonts/peyda/woff/PeydaWebFaNum-Thin.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Peyda-1";
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url("../fonts/peyda/woff2/PeydaWebFaNum-ExtraLight.woff2")
+        format("woff2"),
+      url("../fonts/peyda/TTF/PeydaFaNum-ExtraLight.ttf") format("TrueType"),
+      url("../fonts/peyda/woff/PeydaWebFaNum-ExtraLight.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Peyda-1";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../fonts/peyda/woff2/PeydaWebFaNum-Light.woff2") format("woff2"),
+      url("../fonts/peyda/TTF/PeydaFaNum-Light.ttf") format("TrueType"),
+      url("../fonts/peyda/woff/PeydaWebFaNum-Light.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Peyda-1";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/peyda/woff2/PeydaWebFaNum-Regular.woff2") format("woff2"),
+      url("../fonts/peyda/TTF/PeydaFaNum-Regular.ttf") format("TrueType"),
+      url("../fonts/peyda/woff/PeydaWebFaNum-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Peyda-1";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../fonts/peyda/woff2/PeydaWebFaNum-Medium.woff2") format("woff2"),
+      url("../fonts/peyda/TTF/PeydaFaNum-Medium.ttf") format("TrueType"),
+      url("../fonts/peyda/woff/PeydaWebFaNum-Medium.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Peyda-1";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../fonts/peyda/woff2/PeydaWebFaNum-SemiBold.woff2")
+        format("woff2"),
+      url("../fonts/peyda/TTF/PeydaFaNum-SemiBold.ttf") format("TrueType"),
+      url("../fonts/peyda/woff/PeydaWebFaNum-SemiBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Peyda-1";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/peyda/woff2/PeydaWebFaNum-Bold.woff2") format("woff2"),
+      url("../fonts/peyda/TTF/PeydaFaNum-Bold.ttf") format("TrueType"),
+      url("../fonts/peyda/woff/PeydaWebFaNum-Bold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Peyda-1";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("../fonts/peyda/woff2/PeydaWebFaNum-ExtraBold.woff2")
+        format("woff2"),
+      url("../fonts/peyda/TTF/PeydaFaNum-ExtraBold.ttf") format("TrueType"),
+      url("../fonts/peyda/woff/PeydaWebFaNum-ExtraBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Peyda-1";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("../fonts/peyda/woff2/PeydaWebFaNum-Black.woff2") format("woff2"),
+      url("../fonts/peyda/TTF/PeydaFaNum-Black.ttf") format("TrueType"),
+      url("../fonts/peyda/woff/PeydaWebFaNum-Black.woff") format("woff");
+  }
+}
+
+@layer base {
+  * {
+    @apply font-peyda;
+    font-feature-settings: "ss01" 1;
+    font-variant-ligatures: discretionary-ligatures;
+  }
+}
+
+#sliding-menu.show {
+  width: 100%;
+}
+/*-------main-menu---------*/
+#main-menu li {
+  position: relative;
+}
+#main-menu li ul {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 85%;
+  right: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  border-radius: 1rem 0rem 1rem 1rem;
+  border: 1px solid rgba(167, 139, 250, 0.5);
+  padding-block: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+#main-menu li ul li {
+  min-width: 12.5rem;
+}
+
+#main-menu li a {
+  padding-block: 1.75rem;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+#main-menu li ul li a {
+  padding: 0.625rem;
+  display: block;
+}
+
+#main-menu li:hover > ul {
+  pointer-events: all;
+  opacity: 1;
+}
+#main-menu li ul li ul {
+  top: 0;
+  left: 100%;
+}
+
+#main-menu li ul li:hover > ul {
+  display: block;
+}
+
+/*-------mobile-menu---------*/
+#mobile-menu li {
+  position: relative;
+}
+
+#mobile-menu li a {
+  display: block;
+}
+
+#mobile-menu li ul {
+  display: none;
+  position: static; /* یا absolute برای حالت‌های خاص */
+}
+
+#mobile-menu li ul li a {
+  padding: 0.625rem;
+}
+
+#mobile-menu .sub-menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+#mobile-menu i {
+  float: left;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  position: absolute;
+  z-index: 0;
+  line-height: 0;
+}
+
+#mobile-menu .menu-item-has-children > .sub-menu-toggle {
+  display: block;
+}
+
+.woocommerce-product-gallery__wrapper div {
+  border-radius: 1.5rem;
+}
+
+/*-------- woocommerce single product -------*/
+@layer components {
+  .woocommerce-product-gallery ol {
+    @apply overflow-auto flex;
+  }
+  .woocommerce-product-gallery ol li {
+    @apply border rounded-2xl overflow-hidden !mr-3 first:!mr-0 min-w-10;
+  }
+
+  .woocommerce div.product p.price,
+  .woocommerce div.product span.price {
+    @apply !text-black;
+  }
+}
+
+/* Buttons */
+@layer components {
+  .primary-btn {
+    @apply py-4 px-6 !bg-violet-400 shadow-lg rounded-full !text-white cursor-pointer;
+  }
+
+  .small-btn {
+    @apply py-3 px-6 text-sm;
+  }
+}
+
+input[type="submit"] {
+  @apply cursor-pointer;
+}
+
+@layer components {
+  input[class^="form-"] {
+    @apply text-black;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    @apply bg-current;
+  }
+}
+
+/* Custom Scrollbar */
+@layer components {
+  /* width */
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  /* Track */
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-200 rounded-md;
+  }
+
+  /* Handle */
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-500 rounded-md;
+  }
+
+  /* Handle on hover */
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
+
+/* Icons */
+@layer components {
+  .icon {
+    @apply size-6 text-inherit inline-block fill-current;
+  }
+}
+
+/*cart & checkout rewrites*/
+.wc-block-components-button,
+.wp-block-button__link {
+  @apply primary-btn block;
+}
+
+.wc-block-cart-item__quantity {
+  @apply flex justify-between items-center;
+}
+
+.wc-block-cart-item__remove-link {
+  @apply !bg-rose-600 !text-white !flex !flex-row-reverse !no-underline !border !rounded-md !border-solid !px-2 !py-1 !justify-center !items-center;
+}
+
+.wc-block-components-quantity-selector {
+  @apply !m-0;
+}
+
+.wc-block-cart-item__total {
+  @apply max-md:hidden;
+}
+
+.wp-block-woocommerce-empty-cart-block {
+  @apply flex flex-col justify-center items-center gap-2 py-8;
+}
+
+/*my account*/
+
+.order-completed {
+  @apply bg-green-300 text-green-950;
+}
+
+.order-processing {
+  @apply bg-blue-300 text-blue-950;
+}
+
+.order-on-hold {
+  @apply bg-yellow-300 text-yellow-950;
+}
+
+.order-cancelled,
+.order-refunded,
+.order-failed {
+  @apply bg-red-300 text-red-950;
+}
+
+/* forms */
+.woocommerce form .form-row {
+  @apply !p-0 !m-0;
+}
+
+.select2-selection__arrow {
+  @apply !left-2 !top-2;
+}
+
+.select2-search__field {
+  @apply rounded-lg;
+}
+
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected],
+.select2-container--default
+  .select2-results__option--highlighted[data-selected] {
+  @apply bg-blue-600;
+}
+
+.woocommerce-privacy-policy-text p {
+  @apply text-sm text-gray-700;
+}
+
+.woocommerce-privacy-policy-text a {
+  @apply underline text-blue-600;
+}
+
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last {
+  @apply !w-full !float-none;
+}
+
+.woocommerce-variation-add-to-cart-disabled button {
+  @apply pointer-events-none bg-gray-300 text-black/25;
+}
+
+form.checkout-fields .form-row {
+  @apply !mb-4 order-[99];
+}
+
+.woocommerce-checkout-payment {
+  @apply p-2 !bg-gray-200;
+}
+
+.woocommerce-checkout-payment button[name="woocommerce_checkout_place_order"] {
+  @apply mt-2;
+}
+
+.woocommerce button.button {
+  @apply !primary-btn;
+}
+
+.woocommerce-billing-fields__field-wrapper {
+  @apply flex flex-col;
+}
+
+.select2-container .select2-selection--single {
+  @apply !h-full !p-2 !border-black !rounded-none;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  @apply h-[30px];
+}
+
+.select2-dropdown {
+  @apply !border-black !rounded-none;
+}
+
+form.woocommerce-form-coupon .form-row-last {
+  @apply flex justify-end !mt-2;
+}
