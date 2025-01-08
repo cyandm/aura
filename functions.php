@@ -22,7 +22,7 @@ require_once(CYN_THEME_DIRECTORY . '/inc/classes/cyn-custom-code.php');
 
 
 //instance classes
-new cyn_theme_init(false, '0.0.1');
+new cyn_theme_init(true, '1.0.0');
 new cyn_register();
 new cyn_customize();
 new cyn_filters();

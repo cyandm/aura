@@ -23,17 +23,21 @@ $varProducts = $product->get_children();
 		</div>
 
 
-		<div class="flex flex-col gap-3 pt-2">
+		<div class="flex flex-col gap-3 pt-2 h-full">
 
-			<div class="grid gap-2">
+			<div class="grid gap-2 flex-col">
 
-				<div class="text-base font-medium">
+				<div class="text-base font-medium min-h-12">
 					<?php echo get_the_title($product->id); ?>
 				</div>
 
-				<div class="py-3 px-2 bg-neutral-200 rounded-xl text-base font-medium transition-all duration-500 group-hover:bg-violet-400 group-hover:text-white">
+				<?php if($product->get_price_html()): ?>
+
+				<div class="py-3 px-2 bg-neutral-200 rounded-xl text-base font-medium transition-all duration-500 group-hover:bg-violet-400 group-hover:text-white text-center mt-auto">
 					<?php echo $product->get_price_html(); ?>
 				</div>
+
+				<?php endif; ?>
 
 			</div>
 		</div>
