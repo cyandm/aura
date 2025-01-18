@@ -56,21 +56,6 @@
 			<?php
 
 			?>
-			<!-- <li>
-				<a href="<?= esc_url($link_whatsapp); ?>">
-					<svg class="icon">
-						<use href="#icon-Whatsup" />
-					</svg>
-				</a>
-			</li>
-
-			<li>
-				<a href="<?= esc_url($link_youtube); ?>">
-					<svg class="icon">
-						<use href="#icon-Youtube" />
-					</svg>
-				</a>
-			</li> -->
 		</ul>
 	</div>
 </div>

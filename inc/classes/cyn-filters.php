@@ -9,6 +9,7 @@ if (! class_exists('cyn_filters')) {
 			add_action('cyn_woocommerce_filters', [$this, 'wrapper_start'], 5);
 			add_action('cyn_woocommerce_filters', [$this, 'display_in_stock'], 10);
 			add_action('cyn_woocommerce_filters', [$this, 'display_in_offer'], 15);
+			add_action('cyn_woocommerce_filters', [$this, 'display_sub_category'], 18);
 			add_action('cyn_woocommerce_filters', [$this, 'display_terms'], 20);
 			add_action('cyn_woocommerce_filters', [$this, 'display_price'], 30);
 			add_action('cyn_woocommerce_filters', [$this, 'display_submit_button'], 90);
@@ -83,9 +84,25 @@ if (! class_exists('cyn_filters')) {
 			}
 		}
 
+
 		function display_price()
 		{
 			wc_get_template('global/price-filter.php');
+		}
+
+		function display_sub_category()
+		{
+			$sub_cats = get_terms([
+				'taxonomy' => 'product_cat',
+				'hide_empty' => false,
+				'parent' => get_queried_object_id(),
+			]);
+
+			if (empty($sub_cats)) {
+				return;
+			}
+
+			wc_get_template('global/sub-cat-filter.php', ['sub_cats' => $sub_cats]);
 		}
 
 		function display_submit_button()

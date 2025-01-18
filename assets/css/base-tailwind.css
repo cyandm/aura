@@ -155,7 +155,7 @@
 }
 #main-menu li ul li ul {
   top: 0;
-  left: 100%;
+  right: 100%;
 }
 
 #main-menu li ul li:hover > ul {
@@ -167,6 +167,14 @@
   position: relative;
 }
 
+#mobile-menu > li {
+  @apply bg-gray-100 p-2 w-full mx-auto rounded-2xl border shadow-md;
+}
+
+#mobile-menu li > ul {
+  @apply pt-3;
+}
+
 #mobile-menu li a {
   display: block;
 }
@@ -174,10 +182,16 @@
 #mobile-menu li ul {
   display: none;
   position: static; /* یا absolute برای حالت‌های خاص */
+  width: 100%;
 }
 
 #mobile-menu li ul li a {
   padding: 0.625rem;
+}
+
+#mobile-menu li ul {
+  padding-inline: 1rem;
+  padding-block-end: 1rem;
 }
 
 #mobile-menu .sub-menu-toggle {

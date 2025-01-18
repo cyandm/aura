@@ -23,7 +23,8 @@ $categories = get_the_category() ?? [];
 	<div class="flex gap-5 max-lg:flex-col-reverse">
 
 
-		<?php cyn_get_component('sidebar-blog') ?>
+		<?php //cyn_get_component('sidebar-blog') 
+		?>
 
 
 

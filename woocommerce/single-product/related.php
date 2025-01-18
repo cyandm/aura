@@ -45,7 +45,9 @@ if ( $related_products ) : ?>
 
 					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 			
-					wc_get_template_part( 'content', 'product' );
+					cyn_get_card('product', [
+						'post-id' => $related_product->get_id(),
+					]);
 					?>
 				</swiper-slide>
 			<?php endforeach; ?>

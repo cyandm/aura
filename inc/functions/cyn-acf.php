@@ -42,6 +42,8 @@ function cyn_register_acf_home_page()
 
 	array_push($fields, cyn_acf_add_tab('دسته بندی برند ها'));
 
+	array_push($fields, cyn_acf_add_text('brand_categories_title', 'عنوان دسته بندی برند ها'));
+
 	for ($i = 1; $i <= 4; $i++) {
 		array_push($fields, cyn_acf_add_group("brand_cat_$i", "برند $i", [
 			cyn_acf_add_image('brand_img', 'عکس برند'),
