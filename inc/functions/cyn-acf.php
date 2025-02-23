@@ -55,6 +55,9 @@ function cyn_register_acf_home_page()
 
 	array_push($fields, cyn_acf_add_tab('گروه محصولات'));
 
+	array_push($fields, cyn_acf_add_text('last_products_title', 'عنوان سکشن محصولات جدید'));
+	array_push($fields, cyn_acf_add_text('last_products_link', 'لینک سکشن محصولات جدید'));
+
 	for ($i = 1; $i <= 6; $i++) {
 		array_push($fields, cyn_acf_add_group("group_$i", "گروه $i", [
 			cyn_acf_add_text('title', 'عنوان بخش'),
@@ -63,6 +66,8 @@ function cyn_register_acf_home_page()
 			cyn_acf_add_post_object('products', 'محصولات بخش', 'product', '', 1),
 		]));
 	}
+
+
 
 	array_push($fields, cyn_acf_add_tab('دیگر تنظیمات'));
 	array_push($fields, cyn_acf_add_link('contact_us_link', 'لینک تماس با ما - سوالات متداول'));

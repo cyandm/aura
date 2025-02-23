@@ -2,7 +2,7 @@
 $render_template = $args['render_template'] ?? true;
 
 $link_instagram = get_option('link_instagram');
-$link_youtube = get_option('link_youtube');
+$link_telegram = get_option('link_telegram');
 $link_whatsapp = get_option('link_whatsapp');
 $footer_logo = get_option('footer_logo');
 //$footer_inperson = get_option('footer_inperson');
@@ -18,26 +18,27 @@ $enamad = get_option('enamad');
 <?php if ($render_template) : ?>
 	<section class="font-peyda mt-12 border-t border-gray">
 		<div class="container mx-auto px-10 lg:px-10 py-5">
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-				<div class="flex items-center">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+				<!-- <div class="flex items-center">
 					<img class="ml-4 w-16 h-16"
-						src="<?= get_stylesheet_directory_uri() . '/assets/img/car.svg'; ?>"
+						src="<? //= get_stylesheet_directory_uri() . '/assets/img/car.svg'; 
+								?>"
 						alt="Car Icon" />
 					<div>
 						<h3 class="text-lg font-bold">ارسال رایگان</h3>
 						<p class="text-sm">خرید بالای ۷۰۰ هزار تومن</p>
 					</div>
-				</div>
-				<div class="flex items-center">
+				</div> -->
+				<div class="flex items-center justify-center">
 					<img class="ml-4 w-16 h-16"
 						src="<?= get_stylesheet_directory_uri() . '/assets/img/support.svg'; ?>"
 						alt="Box Icon" />
 					<div>
 						<h3 class="text-lg font-bold">پشتیبانی</h3>
-						<p class="text-sm">مختص شهر تهران</p>
+						<p class="text-sm">مختص کل ایران</p>
 					</div>
 				</div>
-				<div class="flex items-center">
+				<div class="flex items-center justify-center">
 					<img class="ml-4 w-16 h-16"
 						src="<?= get_stylesheet_directory_uri() . '/assets/img/click-mobile.svg'; ?>"
 						alt="Click Mobile Icon" />
@@ -46,13 +47,13 @@ $enamad = get_option('enamad');
 						<p class="text-sm">ضمانت اصل بودن تمام کالاها</p>
 					</div>
 				</div>
-				<div class="flex items-center">
+				<div class="flex items-center justify-center">
 					<img class="ml-4 w-16 h-16"
 						src="<?= get_stylesheet_directory_uri() . '/assets/img/secure-payment.svg'; ?>"
 						alt="Earth Icon" />
 					<div>
-						<h3 class="text-lg font-bold">پرداخت امن</h3>
-						<p class="text-sm">تا ۷ روز در صورت داشتن مشکل</p>
+						<h3 class="text-lg font-bold">خرید مطمئن</h3>
+						<p class="text-sm">تعویض تا 24 ساعت در صورت داشتن ایراد</p>
 					</div>
 				</div>
 			</div>
@@ -77,10 +78,11 @@ $enamad = get_option('enamad');
 									?></li> -->
 						<li>
 							<a href="tel:<?= $footer_support; ?>">
-								شماره تلفن : <?= esc_html($footer_support); ?>
+								شماره واتس اپ : <?= esc_html($footer_support); ?>
 							</a>
 						</li>
-						<li>ساعات پاسخگویی : <?= esc_html($footer_hours); ?></li>
+						<!-- <li>ساعات پاسخگویی : <? //= esc_html($footer_hours); 
+													?></li> -->
 					</ul>
 
 					<?php if ($enamad): ?>
@@ -171,7 +173,7 @@ $enamad = get_option('enamad');
 
 					<li class="group">
 						<a href="<?= esc_url($link_whatsapp);
-									?>" class="group-hover:bg-indigo-600">
+									?>" class="group-hover:bg-indigo-600 flex items-center justify-center">
 							<svg class="icon text-indigo-600 group-hover:text-white transition-all duration-500">
 								<use href="#icon-Whatsup" />
 							</svg>
@@ -184,7 +186,7 @@ $enamad = get_option('enamad');
 
 					<li class="group">
 						<a href="<?= esc_url($link_instagram);
-									?>" class="group-hover:bg-indigo-600">
+									?>" class="group-hover:bg-indigo-600 flex items-center justify-center">
 							<svg class="icon text-indigo-600 group-hover:text-white transition-all duration-500">
 								<use href="#icon-instagram" />
 							</svg>
@@ -193,13 +195,13 @@ $enamad = get_option('enamad');
 
 				<?php endif ?>
 
-				<?php if ($link_youtube): ?>
+				<?php if ($link_telegram): ?>
 
 					<li class="group">
-						<a href="<?= esc_url($link_youtube);
-									?>" class="group-hover:bg-indigo-600">
+						<a href="<?= esc_url($link_telegram);
+									?>" class="group-hover:bg-indigo-600 flex items-center justify-center">
 							<svg class="icon text-indigo-600 group-hover:text-white transition-all duration-500">
-								<use href="#icon-Youtube" />
+								<use href="#icon-Send" />
 							</svg>
 						</a>
 					</li>

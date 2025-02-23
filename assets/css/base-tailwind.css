@@ -409,3 +409,14 @@ form.checkout-fields .form-row {
 form.woocommerce-form-coupon .form-row-last {
   @apply flex justify-end !mt-2;
 }
+
+.woocommerce-product-gallery .flex-control-thumbs li img {
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 768px) {
+  .content-area .product .price > span {
+    font-size: 1.25rem !important;
+  }
+}

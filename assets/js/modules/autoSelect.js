@@ -1,21 +1,21 @@
 function autoSelect() {
-	const variationForm = document.querySelector('.variations_form');
+  const variationForm = document.querySelector(".variations_form");
 
-	if (!variationForm) return;
+  if (!variationForm) return;
 
-	const selectGroup = variationForm.querySelectorAll('select');
+  const selectGroup = variationForm.querySelectorAll("select");
 
-	selectGroup.forEach((el) => {
-		const option = el.querySelector('option.enabled');
-		el.value = option.value;
-		el.dispatchEvent(
-			new Event('change', {
-				bubbles: true,
-				cancelable: true,
-				composed: true,
-			})
-		);
-	});
+  selectGroup.forEach((el) => {
+    const option = el.querySelector("option.enabled");
+    el.value = option.value;
+    el.dispatchEvent(
+      new Event("change", {
+        bubbles: true,
+        cancelable: true,
+        composed: true,
+      })
+    );
+  });
 }
 
-setTimeout(autoSelect, '500');
+setTimeout(autoSelect, 500);

@@ -8,9 +8,11 @@ cyn_get_component('home/slider');
 
 cyn_get_component('home/categories');
 
-cyn_get_component('home/product-section', ['group' => 'group_1', 'post-id' => get_the_ID(),]);
+cyn_get_component('home/new-product-section', ['group' => 'last_products', 'post-id' => get_the_ID()]);
 
 cyn_get_component('home/brands-banner');
+
+cyn_get_component('home/product-section', ['group' => 'group_1', 'post-id' => get_the_ID(),]);
 
 cyn_get_component('home/product-section', ['group' => 'group_2', 'post-id' => get_the_ID(),]);
 

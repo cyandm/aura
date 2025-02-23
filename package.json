@@ -1,6 +1,6 @@
 {
   "name": "AURA",
-  "version": "1.0.0",
+  "version": "1.5.1",
   "description": "",
   "author": "cyan-dm",
   "scripts": {
@@ -26,7 +26,8 @@
     "flowbite": "^2.3.0",
     "gsap": "^3.12.5",
     "swiper": "^11.1.14",
-    "tailwind-scrollbar-hide": "^1.1.7"
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "toastify-js": "^1.12.0"
   },
   "browserslist": [
     "> 1%",

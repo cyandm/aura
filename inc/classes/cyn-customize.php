@@ -114,7 +114,7 @@ if ( ! class_exists( 'cyn_customize' ) ) {
 
 			//social
 			$this->cyn_add_control( $wp_customize, 'social_section', 'text', 'link_instagram', 'اینستاگرام' );
-			$this->cyn_add_control( $wp_customize, 'social_section', 'text', 'link_youtube', 'یوتیوب' );
+			$this->cyn_add_control( $wp_customize, 'social_section', 'text', 'link_telegram', 'تلگرام' );
 			$this->cyn_add_control( $wp_customize, 'social_section', 'text', 'link_whatsapp', 'واتس اپ' );
 
 			//footer

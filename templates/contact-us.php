@@ -3,8 +3,8 @@
 get_header();
 
 $thumbnail_url = get_the_post_thumbnail_url();
-$btn_link_whatsapp = get_option('btn_link_whatsapp');
-$btn_link_instagram = get_option('btn_link_instagram');
+$btn_link_whatsapp = get_option('link_whatsapp');
+$btn_link_instagram = get_option('link_instagram');
 $contact_title = get_field("contact_title");
 $sub_title = get_field("sub_title");
 ?>
@@ -40,7 +40,7 @@ $sub_title = get_field("sub_title");
 					</div>
 
 					<div class="col-span-1 max-sm:col-span-2">
-						<input type="text" name="phone" id="phone" placeholder="موضوع" required>
+						<input type="text" name="subject" id="subject" placeholder="موضوع" required>
 					</div>
 
 					<div class="col-span-2">

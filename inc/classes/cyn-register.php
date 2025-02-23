@@ -32,6 +32,7 @@ if (! class_exists('cyn_register')) {
 		{
 			$this->cyn_make_post_type('faq', 'سوالات متداول', 'سوالات متداول', 'dashicons-format-quote', $supports = ['title', 'thumbnail', 'editor', 'excerpt']);
 			$this->cyn_make_post_type('slider', 'اسلایدر', 'اسلایدرها', 'dashicons-slides', $supports = ['title']);
+			$this->cyn_make_post_type('contact_form', 'فرم', 'فرم ها', 'dashicons-list-view', $supports = ['title', 'editor']);
 		}
 
 		public function cyn_taxonomy_register()

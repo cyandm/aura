@@ -5,10 +5,10 @@ if (false === function_exists('render_grid_items')) {
 
 		if (empty($brand_category)) return;
 ?>
-		<a href="<?php echo esc_url($brand_category['brand_link']) ?>" class="<?php echo $className ?> relative group">
+		<a href="<?php echo esc_url($brand_category['brand_link']) ?>" class="<?php echo $className ?> relative group h-80 max-md:h-64">
 			<?php echo wp_get_attachment_image($brand_category['brand_img'], 'full', false, ['class' => 'w-full object-cover h-full']) ?>
 
-			<div class="absolute bg-white/50 xl:backdrop-blur-xl py-1 pl-4 pr-6 bottom-6 rounded-l-xl font-medium text-2xl text-zinc-800 flex items-center">
+			<div class="absolute bg-white/50 xl:backdrop-blur-xl py-1 pl-3 pr-3 bottom-6 rounded-l-xl font-medium text-2xl text-zinc-800 flex items-center">
 				<span class="w-full">
 					<?php echo $brand_category['brand_category_title'] ?>
 				</span>
@@ -58,13 +58,19 @@ if (!empty($brand_cat_1["brand_img"]) && !empty($brand_cat_2["brand_img"]) && !e
 
 			</div>
 
-			<div class="w-full grid grid-cols-10 grid-rows-2 max-sm:grid-rows-4 h-[533px] max-sm:h-[900px]">
+			<!-- <div class="w-full grid grid-cols-10 grid-rows-2 max-sm:grid-rows-4 h-[533px] max-sm:h-[900px]"> -->
+			<div class="w-full grid grid-cols-12 lg:grid-rows-1 grid-rows-2 h-auto gap-2">
 
 				<?php
-				render_grid_items($brand_cat_1, 'col-span-5 row-span-2 [&>img]:rounded-r-3xl max-lg:col-span-5 max-lg:row-span-1 max-sm:col-span-10 max-lg:[&>img]:rounded-r-none max-lg:[&>img]:rounded-tr-3xl max-sm:[&>img]:rounded-tl-3xl');
-				render_grid_items($brand_cat_2, 'col-span-3 row-span-2 max-lg:col-span-5 max-lg:row-span-1 max-sm:col-span-10 max-lg:[&>img]:rounded-tl-3xl max-sm:[&>img]:rounded-l-none');
-				render_grid_items($brand_cat_3, 'col-span-2 row-span-1 [&>img]:rounded-tl-3xl max-lg:col-span-5 max-lg:row-span-1 max-sm:col-span-10 max-lg:[&>img]:rounded-tl-none max-lg:[&>img]:rounded-br-3xl max-sm:[&>img]:rounded-r-none');
-				render_grid_items($brand_cat_4, 'col-span-2 row-span-1 [&>img]:rounded-bl-3xl max-lg:col-span-5 max-lg:row-span-1 max-sm:col-span-10 max-sm:[&>img]:rounded-br-3xl');
+				// render_grid_items($brand_cat_1, 'col-span-5 row-span-2 [&>img]:rounded-r-3xl max-lg:col-span-5 max-lg:row-span-1 max-sm:col-span-10 max-lg:[&>img]:rounded-r-none max-lg:[&>img]:rounded-tr-3xl max-sm:[&>img]:rounded-tl-3xl');
+				// render_grid_items($brand_cat_2, 'col-span-3 row-span-2 max-lg:col-span-5 max-lg:row-span-1 max-sm:col-span-10 max-lg:[&>img]:rounded-tl-3xl max-sm:[&>img]:rounded-l-none');
+				// render_grid_items($brand_cat_3, 'col-span-2 row-span-1 [&>img]:rounded-tl-3xl max-lg:col-span-5 max-lg:row-span-1 max-sm:col-span-10 max-lg:[&>img]:rounded-tl-none max-lg:[&>img]:rounded-br-3xl max-sm:[&>img]:rounded-r-none');
+				//render_grid_items($brand_cat_4, 'col-span-2 row-span-1 [&>img]:rounded-bl-3xl max-lg:col-span-5 max-lg:row-span-1 max-sm:col-span-10 max-sm:[&>img]:rounded-br-3xl');
+
+
+				render_grid_items($brand_cat_1, 'lg:col-span-4 col-span-12 [&>img]:rounded-3xl');
+				render_grid_items($brand_cat_2, 'lg:col-span-4 col-span-12 [&>img]:rounded-3xl');
+				render_grid_items($brand_cat_3, 'lg:col-span-4 col-span-12 [&>img]:rounded-3xl');
 				?>
 
 			</div>
