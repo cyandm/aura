@@ -28,10 +28,9 @@ if (false === function_exists('render_grid_items')) {
 $brand_cat_1 = get_field('brand_cat_1');
 $brand_cat_2 = get_field('brand_cat_2');
 $brand_cat_3 = get_field('brand_cat_3');
-$brand_cat_4 = get_field('brand_cat_4');
 $brand_categories_title = get_field('brand_categories_title');
 
-if (!empty($brand_cat_1["brand_img"]) && !empty($brand_cat_2["brand_img"]) && !empty($brand_cat_3["brand_img"]) && !empty($brand_cat_4["brand_img"])):
+if (!empty($brand_cat_1["brand_img"]) && !empty($brand_cat_2["brand_img"]) && !empty($brand_cat_3["brand_img"])):
 ?>
 
 	<section class="my-9 max-w-full">

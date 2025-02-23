@@ -10,7 +10,14 @@ $products = get_posts(array(
     'post_type' => 'product',
     'posts_per_page' => 12,
     'orderby' => 'date',
-    'order' => 'DESC'
+    'order' => 'DESC',
+    'meta_query' => array(
+        array(
+            'key' => '_stock_status',
+            'value' => 'instock',
+            'compare' => '='
+        )
+    )
 ));
 
 if (empty($title) || empty($products) || empty($link))
