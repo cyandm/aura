@@ -1,4 +1,4 @@
-<div id="popup-overlay"
+<!-- <div id="popup-overlay"
 	 class="hidden fixed top-0 left-0 w-full h-full bg-black opacity-80 z-40">
 </div>
 
@@ -22,9 +22,9 @@
 			</div>
 		</div>
 		<div class="col-span-12 lg:col-span-6 ">
-			<img src="<?= get_stylesheet_directory_uri() . '/assets/img/popup.png'; ?>"
+			<img src="<//?= get_stylesheet_directory_uri() . '/assets/img/popup.png'; ?>"
 				 class="w-full h-full"
 				 alt="popup" />
 		</div>
 	</div>
-</div>
+</div> -->

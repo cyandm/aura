@@ -30,7 +30,7 @@ do_action('woocommerce_before_account_navigation');
 	</h1>
 
 	<span class="text-gray-600">
-		به گالری سراد خوش آمدید
+		به آئورا استایل خوش آمدید
 	</span>
 </div>
 
