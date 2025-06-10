@@ -420,3 +420,13 @@ form.woocommerce-form-coupon .form-row-last {
     font-size: 1.25rem !important;
   }
 }
+
+.wc-lightbox .woocommerce-product-gallery div .woocommerce-product-gallery__wrapper div a{
+    display: flex;
+    max-height: 600px;
+}
+
+
+.wc-lightbox .woocommerce-product-gallery div .woocommerce-product-gallery__wrapper div a > img{
+  object-fit: cover;
+}

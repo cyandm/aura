@@ -2,8 +2,8 @@
 <a href="#comment-reply"></a>
 <div class="contact-container">
 	<div class="py-4 [&_svg]:text-gray-400 [&_a]:text-blue-600 [&_a]:underline">
-		<?php comment_form( [ 
-			'fields' => [ 
+		<?php comment_form([
+			'fields' => [
 				'author' => '<label class="form-group relative order-1">
                                         <svg class="icon mx-3 absolute top-1/2 transform -translate-y-1/2"><use href="#icon-User,-Profile"/></svg> 
                                         <input placeholder="نام شما" type="text" class="form-control w-full rounded-lg border-gray-300 py-2 px-10" name="author">
@@ -30,34 +30,34 @@
                     </div>
                      </div>',
 			//'class_submit' => 'comment-submit-btn'
-		] ); ?>
+		]); ?>
 	</div>
 </div>
 
-<?php if ( have_comments() ) :
+<?php if (have_comments()) :
 
 
-	?>
+?>
 
 	<div class="comment-list gap-20"
-		 id="comment-list">
+		id="comment-list">
 
 		<?php
-		$comments = get_comments( array(
+		$comments = get_comments(array(
 			'post_id' => get_the_ID(),
 			'status' => 'approve',
 			'orderby' => 'comment_date',
 			'order' => 'ASC'
-		) );
+		));
 		?>
 
-		<?php foreach ( $comments as $comment ) :
+		<?php foreach ($comments as $comment) :
 
-			if ( $comment->comment_parent != 0 ) {
+			if ($comment->comment_parent != 0) {
 				continue;
 			}
 
-			?>
+		?>
 
 			<div class="flex flex-col gap-3 shadow-md rounded-3xl p-6 my-4">
 
@@ -65,18 +65,18 @@
 
 					<!-- Avatar -->
 					<div>
-						<?php echo get_avatar( $comment, 50, '', 'avatar', [ 'class' => 'rounded-full' ] ); ?>
+						<?php echo get_avatar($comment, 50, '', 'avatar', ['class' => 'rounded-full']); ?>
 					</div>
 
 					<div class="flex flex-col gap-3">
 
 						<!-- Name & Reply -->
 						<div class="flex flex-row gap-2">
-							<?php echo get_comment_author_link( $comment ); ?>
+							<?php echo get_comment_author_link($comment); ?>
 
 							<a class="reply-comment cursor-pointer"
-							   id="comment-reply"
-							   comment-id='<?php echo $comment->comment_ID ?>'>
+								id="comment-reply"
+								comment-id='<?php echo $comment->comment_ID ?>'>
 								<svg class="icon w-6 h-6">
 									<use href="#icon-Reply,-Emails,-Letter,-Mail-1" />
 								</svg>
@@ -88,12 +88,12 @@
 							<!-- Date -->
 							<div>
 								<time
-									  datetime="<?php echo get_comment_date( 'c', $comment ); ?>"><?php echo get_comment_date( 'd,M,Y', $comment ); ?></time>
+									datetime="<?php echo get_comment_date('c', $comment); ?>"><?php echo get_comment_date('d,M,Y', $comment); ?></time>
 							</div>
 							،
 							<!-- Time -->
 							<div>
-								<?php comment_time( 'H:i:s' ); ?>
+								<?php comment_time('H:i:s'); ?>
 							</div>
 
 						</div>
@@ -107,34 +107,34 @@
 				</div>
 
 				<?php
-				$children = get_comments( [ 
+				$children = get_comments([
 					'post_id' => get_the_ID(),
 					'status' => 'approve',
 					'orderby' => 'comment_date',
 					'order' => 'ASC',
 					'parent' => $comment->comment_ID,
-				] ); ?>
+				]); ?>
 
-				<?php if ( $children ) : ?>
+				<?php if ($children) : ?>
 					<!-- comment children -->
 					<div class=" border border-gray-200 p-4 rounded-3xl">
 
-						<?php foreach ( $children as $child_comment ) : ?>
+						<?php foreach ($children as $child_comment) : ?>
 
 							<div>
 								<div class="flex items-center gap-3">
 
 									<!-- Avatar -->
 									<div>
-										<?php echo get_avatar( $child_comment, 50, '', 'avatar', [ 'class' => 'rounded-full' ] ); ?>
+										<?php echo get_avatar($child_comment, 50, '', 'avatar', ['class' => 'rounded-full']); ?>
 									</div>
 
 									<div class="flex flex-col gap-3">
 
 										<!-- Name & Reply -->
 										<div class="flex flex-row gap-2">
-											<?php echo get_comment_author_link( $child_comment ); ?>
-											<a href="<?php echo esc_url( get_comment_link( $child_comment ) ); ?>">
+											<?php echo get_comment_author_link($child_comment); ?>
+											<a href="<?php echo esc_url(get_comment_link($child_comment)); ?>">
 												<svg class="icon w-6 h-6">
 													<use href="#icon-Reply,-Emails,-Letter,-Mail-1" />
 												</svg>
@@ -146,12 +146,12 @@
 											<!-- Date -->
 											<div>
 												<time
-													  datetime="<?php echo get_comment_date( 'c', $child_comment ); ?>"><?php echo get_comment_date( '', $child_comment ); ?></time>
+													datetime="<?php echo get_comment_date('c', $child_comment); ?>"><?php echo get_comment_date('', $child_comment); ?></time>
 											</div>
 											،
 											<!-- Time -->
 											<div>
-												<?php comment_time( 'H:i:s' ); ?>
+												<?php comment_time('H:i:s'); ?>
 											</div>
 
 										</div>

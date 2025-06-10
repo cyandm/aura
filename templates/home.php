@@ -18,9 +18,9 @@ cyn_get_component('home/product-section', ['group' => 'group_2', 'post-id' => ge
 
 cyn_get_component('home/product-section', ['group' => 'group_3', 'post-id' => get_the_ID(),]);
 
-cyn_get_component('home/product-section', ['group' => 'group_5', 'post-id' => get_the_ID(),]);
+cyn_get_component('home/product-section', ['group' => 'group_4', 'post-id' => get_the_ID(),]);
 
-cyn_get_component('home/product-section', ['group' => 'group_6', 'post-id' => get_the_ID(),]);
+cyn_get_component('home/product-section', ['group' => 'group_5', 'post-id' => get_the_ID(),]);
 
 cyn_get_component('home/blog');
 

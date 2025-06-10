@@ -47,7 +47,7 @@ if (post_password_required()) {
 
 
 	<div class="grid grid-cols-5 max-lg:grid-cols-1 gap-6 max-lg:gap-0">
-		<div class="image space-y-2 col-span-2 max-lg:col-span-1 [&>div]:!w-full">
+		<div class="image space-y-2 col-span-2 max-lg:col-span-1 [&>div]:!w-full wc-lightbox">
 
 			<?php
 			/**

@@ -3235,6 +3235,10 @@ input[type="range"]::-webkit-slider-thumb {
   bottom: 1.5rem;
 }
 
+.bottom-9 {
+  bottom: 2.25rem;
+}
+
 .bottom-\[60px\] {
   bottom: 60px;
 }
@@ -3305,6 +3309,10 @@ input[type="range"]::-webkit-slider-thumb {
 
 .z-50 {
   z-index: 50;
+}
+
+.z-\[1000\] {
+  z-index: 1000;
 }
 
 .order-1 {
@@ -3497,10 +3505,6 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: 3rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -3655,6 +3659,10 @@ input[type="range"]::-webkit-slider-thumb {
   height: 2.5rem;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -3729,6 +3737,10 @@ input[type="range"]::-webkit-slider-thumb {
 
 .w-11\/12 {
   width: 91.666667%;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .w-16 {
@@ -3921,6 +3933,43 @@ input[type="range"]::-webkit-slider-thumb {
 .transform-none {
   -webkit-transform: none;
           transform: none;
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 @-webkit-keyframes ping {
@@ -4436,6 +4485,11 @@ input[type="range"]::-webkit-slider-thumb {
 
 .bg-gray-900\/50 {
   background-color: rgb(17 24 39 / 0.5);
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 159 110 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-200 {
@@ -5538,6 +5592,18 @@ form.woocommerce-form-coupon .form-row-last {
   }
 }
 
+.wc-lightbox .woocommerce-product-gallery div .woocommerce-product-gallery__wrapper div a{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 600px;
+}
+
+.wc-lightbox .woocommerce-product-gallery div .woocommerce-product-gallery__wrapper div a > img{
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .after\:pointer-events-none::after {
   content: var(--tw-content);
   pointer-events: none;
@@ -6605,11 +6671,6 @@ form.woocommerce-form-coupon .form-row-last {
 
   .lg\:text-right {
     text-align: right;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .lg\:text-4xl {

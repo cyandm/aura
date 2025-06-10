@@ -208,6 +208,10 @@ if (! class_exists('cyn_woocommerce')) {
 					$new_item['icon'] = '#icon-store-mobile-11';
 				}
 
+				if ($key === 'payment-methods') {
+					$new_item['icon'] = '#icon-Infornation,-Info';
+				}
+
 				if ($key === 'edit-address') {
 					$new_item['icon'] = '#icon-Pin,-Location-1';
 				}

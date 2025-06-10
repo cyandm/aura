@@ -8,6 +8,7 @@ function cyn_register_acf()
 	}
 	cyn_register_acf_slider();
 	cyn_register_acf_home_page();
+	//cyn_register_acf_custom_products_page();
 	cyn_register_acf_posts();
 	cyn_register_acf_about_us();
 	cyn_register_acf_contact_us();
@@ -86,6 +87,47 @@ function cyn_register_acf_home_page()
 
 	cyn_register_acf_group('تنظیمات ', $fields, $location);
 }
+
+// function cyn_register_acf_custom_products_page()
+// {
+// 	$fields = [];
+
+// 	array_push($fields, cyn_acf_add_tab('بنر میانی'));
+
+// 	array_push($fields, cyn_acf_add_link('middle_banner_link', 'لینک بنر میانی'));
+// 	array_push($fields, cyn_acf_add_image('desktop_middle_banner', 'عکس بنر میانی برای دسکتاپ'));
+// 	array_push($fields, cyn_acf_add_image('mobile_middle_banner', 'عکس بنر میانی برای موبایل'));
+
+
+// 	array_push($fields, cyn_acf_add_tab('گروه محصولات'));
+
+// 	array_push($fields, cyn_acf_add_text('last_products_title', 'عنوان سکشن محصولات جدید'));
+// 	array_push($fields, cyn_acf_add_text('last_products_link', 'لینک سکشن محصولات جدید'));
+
+// 	for ($i = 1; $i <= 6; $i++) {
+// 		array_push($fields, cyn_acf_add_group("group_$i", "گروه $i", [
+// 			cyn_acf_add_text('title', 'عنوان بخش'),
+// 			cyn_acf_add_text('link', 'لینک بخش'),
+// 			cyn_acf_add_wysiwyg('description', 'توضیحات بخش'),
+// 			cyn_acf_add_post_object('products', 'محصولات بخش', 'product', '', 1),
+// 		]));
+// 	}
+
+// 	// array_push($fields, cyn_acf_add_tab('دیگر تنظیمات'));
+// 	// array_push($fields, cyn_acf_add_link('contact_us_link', 'لینک تماس با ما - سوالات متداول'));
+
+// 	$location = [
+// 		[
+// 			[
+// 				'param' => 'page_template',
+// 				'operator' => '==',
+// 				'value' => 'templates/custom-products.php',
+// 			],
+// 		],
+// 	];
+
+// 	cyn_register_acf_group('تنظیمات ', $fields, $location);
+// }
 
 function cyn_register_acf_about_us()
 {

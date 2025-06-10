@@ -38,6 +38,8 @@ if (! class_exists('cyn_register')) {
 		public function cyn_taxonomy_register()
 		{
 			$this->cyn_make_taxonomy('faq-cat', 'دسته سوالات ', 'دسته ها', ['faq']);
+			$this->cyn_make_taxonomy('faq_place', 'مکان نمایش ', 'مکان ها', ['faq']);
+			$this->cyn_make_taxonomy('slider_cat', 'مکان نمایش اسلایدر ', 'مکان ها', ['slider']);
 		}
 
 		public function cyn_term_register()

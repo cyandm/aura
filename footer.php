@@ -7,6 +7,7 @@ $link_whatsapp = get_option('link_whatsapp');
 $footer_logo = get_option('footer_logo');
 //$footer_inperson = get_option('footer_inperson');
 $footer_support = get_option('footer_support');
+$footer_support_link = get_option('footer_support_link');
 $footer_hours = get_option('footer_hours');
 // $btn_link_whatsapp = get_option('btn_link_whatsapp');
 // $btn_link_phones = get_option('btn_link_phones');
@@ -77,7 +78,7 @@ $enamad = get_option('enamad');
 						<!-- <li><? //= esc_html($footer_inperson); 
 									?></li> -->
 						<li>
-							<a href="tel:<?= $footer_support; ?>">
+							<a href="<?= $footer_support_link; ?>">
 								شماره واتس اپ : <?= esc_html($footer_support); ?>
 							</a>
 						</li>
@@ -215,6 +216,20 @@ $enamad = get_option('enamad');
 			</div>
 		</div>
 		<?php cyn_get_component('bottom-app-bar') ?>
+
+		<?php if ($link_whatsapp): ?>
+
+			<div class="fixed right-9 bottom-9 z-[1000]">
+				<a class="w-14 h-14 flex justify-center items-center rounded-full leading-10 relative z-10 text-2xl bg-green-500 text-center shadow-md text-white animate-bounce" href="<?= $link_whatsapp ?>">
+					<svg class="icon size-8">
+						<use href="#icon-Phone,-Call-11" />
+					</svg>
+				</a>
+			</div>
+
+		<?php endif; ?>
+
+
 	</footer>
 
 <?php endif; ?>

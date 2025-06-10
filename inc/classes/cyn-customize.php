@@ -121,6 +121,7 @@ if ( ! class_exists( 'cyn_customize' ) ) {
 			$this->cyn_add_control( $wp_customize, 'footer_section', 'file', 'footer_logo', 'لوگو فوتر' );
 			//$this->cyn_add_control( $wp_customize, 'footer_section', 'text', 'footer_inperson', 'خرید حضوری' );
 			$this->cyn_add_control( $wp_customize, 'footer_section', 'text', 'footer_support', 'پشتیبانی سایت' );
+			$this->cyn_add_control( $wp_customize, 'footer_section', 'text', 'footer_support_link', 'لینک پشتیبانی سایت' );
 			$this->cyn_add_control( $wp_customize, 'footer_section', 'text', 'footer_hours', 'ساعات پاسخگویی' );
 			// $this->cyn_add_control( $wp_customize, 'footer_section', 'text', 'btn_link_whatsapp', 'لینک دکمه ارتباط در واتس اپ' );
 			// $this->cyn_add_control( $wp_customize, 'footer_section', 'text', 'btn_link_phones', 'لینک دکمه شماره تماس ها' );
